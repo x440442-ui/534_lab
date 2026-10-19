@@ -60,6 +60,7 @@
     throw new Error("Could not reach the exchange-rate API.");
   }
 
+  
   getData().then(data => {
     const dates = Object.keys(data.rates).sort();
     const values = dates.map(d => data.rates[d].CNY);
